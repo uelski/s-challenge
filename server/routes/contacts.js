@@ -4,7 +4,7 @@ var router = express.Router();
 /* GET users listing. */
 router.get('/', function(req, res, next) {  
   res.json({
-    users: [
+    contacts: [
 		{
 			name: "Essie Vaill",
 			company: "Litronic Industries",

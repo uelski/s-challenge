@@ -1,0 +1,10 @@
+<div class="desktopCardContainer row" ng-click="selectContact()">
+	<div class="col-xs-4 picture">
+		<img src="{{contact.smallImageURL}}">
+	</div>
+	<div class="col-xs-8 info">
+		<div class="name">{{contact.name}}</div>
+		<div class="phone" ng-if="contact.phone.mobile !== '' && contact.phone.mobile !== undefined">Mobile #:{{contact.phone.mobile}}</div>
+		<div class="phone" ng-if="contact.phone.mobile === '' || contact.phone.mobile === undefined">Home #: {{contact.phone.home}}</div>
+	</div>
+</div>

@@ -8,19 +8,21 @@
  * Controller of the clientApp
  */
 angular.module('clientApp')  
-  .controller('MainCtrl', ['$http', function ($http) {
-    var req = $http.get('/api/users');
-    var scope = this;
+  .controller('MainCtrl', ['$http', '$scope', function ($http, $scope) {
+    var req = $http.get('/api/contacts');
+    // var scope = this;
 
     req.then(function (res) {
-      scope.awesomeUsers = res.data.users;
+      $scope.contacts = res.data.contacts;
+      $scope.contact = $scope.contacts[0];
     });
     req.catch(function (err) {
       console.log(err);
     });
-    scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+
+    $scope.selectContact = function(obj) {
+      var index = obj.index;
+      $scope.contact = $scope.contacts[index];
+    };
+
   }]);

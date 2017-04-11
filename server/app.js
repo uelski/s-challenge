@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var cors = require('cors')
 
 
-var users = require('./routes/users');
+var contacts = require('./routes/contacts');
 
 var app = express();
 
@@ -26,7 +26,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // app.use('/', index);
-app.use('/api/users', users);
+app.use('/api/contacts', contacts);
 
 if (app.get('env') === 'production') {  
   app.use(express.static(path.join(__dirname, '/dist')));

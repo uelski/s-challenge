@@ -30,4 +30,32 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
+  .directive('contactCardMobile', [function() {
+    return {
+      restrict: 'E',
+      scope: {
+        
+      },
+      templateUrl: 'views/directive-contact-card-mobile.html'
+    };
+  }])
+  .directive('contactCardDesktop', [function() {
+    return {
+      restrict: 'E',
+      scope: {
+        contact: '=',
+        selectContact: '&'
+      },
+      templateUrl: 'views/directive-contact-card-desktop.html'
+    };
+  }])
+  .directive('selectedUser', [function() {
+    return {
+      restrict: 'E',
+      scope: {
+        contact: '='
+      },
+      templateUrl: 'views/directive-selected-user.html'
+    };
+  }]);
