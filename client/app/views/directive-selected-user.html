@@ -13,4 +13,76 @@
 			</div>
 		</div>
 	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div>Phone:</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4">
+			<div>{{contact.phone.home}}</div>
+			<div>{{contact.phone.mobile}}</div>
+			<div>{{contact.phone.work}}</div>
+		</div>
+		<div class="col-sm-8">
+			<div> </div>
+			<div>Home</div>
+			<div>Mobile</div>
+			<div>Work</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div>Address:</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div>{{contact.address.street}}</div>
+			<div>{{contact.address.city}}, {{contact.address.state}} {{contact.address.zip}}</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div>Birthday:</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div>{{contact.birthdate}} <b>NEEDS TO BE FORMATTED</b></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div>Email:</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4">
+			<div>{{contact.email}}</div>
+		</div>
+		<div class="col-sm-8">
+			<div ng-click="sendEmail()">Work</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div>Website:</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4">
+			<div>{{contact.website}}</div>
+		</div>
+		<div class="col-sm-8">
+			<div ng-click="launchWebsite()">Launch</div>
+		</div>
+	</div>
+
 </div>
+
+
+
+
+
+
