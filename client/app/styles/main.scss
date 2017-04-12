@@ -13,9 +13,17 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
       overflow: scroll;
 
       .desktopCardContainer {
-        border: 1px solid black;
+        border-top: 1px solid rgba(0,0,0,0.7);
+        border-bottom: 1px solid rgba(0,0,0,0.7);
         margin-left: 0px;
         padding: 10px;
+        background-color: #CFD8DC;
+        &:focus {
+          outline: none;
+        }
+        &.selected {
+          background-color: #90A4AE;
+        }
         .picture {
           img {
             height: 100px;

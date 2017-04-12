@@ -15,6 +15,7 @@ angular.module('clientApp')
     req.then(function (res) {
       $scope.contacts = res.data.contacts;
       $scope.contact = $scope.contacts[0];
+      $scope.selectedIndex = 0;
     });
     req.catch(function (err) {
       console.log(err);
@@ -23,6 +24,7 @@ angular.module('clientApp')
     $scope.selectContact = function(obj) {
       var index = obj.index;
       $scope.contact = $scope.contacts[index];
+      $scope.selectedIndex = index;
     };
 
   }]);

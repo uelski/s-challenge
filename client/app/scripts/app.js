@@ -45,7 +45,9 @@ angular
       restrict: 'E',
       scope: {
         contact: '=',
-        selectContact: '&'
+        selectContact: '&',
+        selectedIndex: '=',
+        index: '@'
       },
       templateUrl: 'views/directive-contact-card-desktop.html'
     };
