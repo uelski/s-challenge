@@ -3,6 +3,30 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+.viewContainer {
+  padding-left: 0;
+  .desktopContainer {
+    padding-left: 0;
+
+    .cardColumn {
+      height: 700px;
+      overflow: scroll;
+
+      .desktopCardContainer {
+        border: 1px solid black;
+        margin-left: 0px;
+        padding: 10px;
+        .picture {
+          img {
+            height: 100px;
+          }
+        }
+      }
+
+    }
+  }
+}
+
 
 
 /* Responsive: Portrait tablets and up */

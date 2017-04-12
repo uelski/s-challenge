@@ -1,9 +1,9 @@
-<div class="container-fluid">
+<div class="container-fluid desktopContainer">
 	<div class="row">
-		<div class="col-sm-4">
+		<div class="col-sm-5 cardColumn">
 			<contact-card-desktop ng-repeat="contact in contacts track by $index" contact="contact" select-contact="selectContact({index: $index})"></contact-card-desktop>
 		</div>
-		<div class="col-sm-8">
+		<div class="col-sm-7">
 			<selected-user contact="contact"></selected-user>
 		</div>
 	</div>
