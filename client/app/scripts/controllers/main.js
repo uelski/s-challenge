@@ -8,14 +8,17 @@
  * Controller of the clientApp
  */
 angular.module('clientApp')  
-  .controller('MainCtrl', ['$http', '$scope', function ($http, $scope) {
+  .controller('MainCtrl', ['$http', '$scope', '$location', '$rootScope', function ($http, $scope, $location, $rootScope) {
     var req = $http.get('/api/contacts');
-    // var scope = this;
-
     req.then(function (res) {
       $scope.contacts = res.data.contacts;
-      $scope.contact = $scope.contacts[0];
-      $scope.selectedIndex = 0;
+      if ($rootScope.contactSelected === undefined) {
+        $scope.contact = $scope.contacts[0];
+        $rootScope.selectedIndex = 0;
+      } else {
+        $scope.contact = $rootScope.contactSelected;
+      }
+      
     });
     req.catch(function (err) {
       console.log(err);
@@ -24,7 +27,15 @@ angular.module('clientApp')
     $scope.selectContact = function(obj) {
       var index = obj.index;
       $scope.contact = $scope.contacts[index];
-      $scope.selectedIndex = index;
+      $rootScope.selectedIndex = index;
+    };
+
+    $scope.showContact = function(obj) {
+      var index = obj.index;
+      $scope.contact = $scope.contacts[index];
+      $rootScope.contactSelected = $scope.contacts[index];
+      $rootScope.selectedIndex = index;
+      $location.path('/contact');
     };
 
 

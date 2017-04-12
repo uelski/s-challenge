@@ -27,6 +27,11 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .when('/contact', {
+        templateUrl: 'views/contact.html',
+        controller: 'ContactCtrl',
+        controllerAs: 'contact'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -35,7 +40,10 @@ angular
     return {
       restrict: 'E',
       scope: {
-        
+        contact: '=',
+        showContact: '&',
+        selectedIndex: '=',
+        index: '@'
       },
       templateUrl: 'views/directive-contact-card-mobile.html'
     };

@@ -1,13 +1,14 @@
-<div class="selectedUserContainer">
+<div class="selectedUserContainer hidden-xs">
 
 	<div class="sectionContainer top">
 		<div class="row">
 			<div class="col-sm-4 picture">
-				<img src="{{contact.largeImageURL}}">
+				<img ng-src="{{contact.largeImageURL}}">
 			</div>
 			<div class="col-sm-8">
 				<div class="row">
-					<h2>{{contact.name}}<h2>
+					<div class="sectionHeader visible-sm-block">Name:</div>
+					<h2 class="name">{{contact.name}}<h2>
 				</div>
 				<div class="row">
 					<div class="sectionHeader">Company:</div>
@@ -102,6 +103,115 @@
 	
 
 </div>
+
+<!-- Mobile -->
+
+<div class="mobileSelectedUserContainer visible-xs-block container-fluid">
+
+	<div class="sectionContainer top">
+		<div class="row">
+			<div class="col-xs-4 picture">
+				<img ng-src="{{contact.smallImageURL}}">
+			</div>
+			<div class="col-xs-8">
+				<div class="row">
+					<div class="sectionHeader">Name:</div>
+					<h4 class="topText">{{contact.name}}<h4>
+				</div>
+				<div class="row">
+					<div class="sectionHeader">Company:</div>
+					<h5 class="topText">{{contact.company}}</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="sectionContainer">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="sectionHeader">Phone:</div>
+			</div>
+		</div>
+		<div class="row phone">
+			<div class="col-xs-8">
+				<h5 ng-if="contact.phone.home !== '' && contact.phone.home !== undefined">{{contact.phone.home}}</h5>
+				<h5 ng-if="contact.phone.mobile !== '' && contact.phone.mobile !== undefined">{{contact.phone.mobile}}</h5>
+				<h5 ng-if="contact.phone.work !== '' && contact.phone.work !== undefined">{{contact.phone.work}}</h5>
+			</div>
+			<div class="col-xs-4">
+				<div> </div>
+				<a href="tel:+1{{contact.phone.home}}" ng-if="contact.phone.home !== '' && contact.phone.home !== undefined"><h5 class="link">Home</h5></a>
+
+				<a href="tel:+1{{contact.phone.mobile}}" ng-if="contact.phone.mobile !== '' && contact.phone.mobile !== undefined"><h5 class="link">Mobile</h5></a>
+				
+				<a href="tel:+1{{contact.phone.work}}" ng-if="contact.phone.work !== '' && contact.phone.work !== undefined"><h5 class="link">Work</h5></a>
+				
+			</div>
+		</div>
+	</div>
+
+	<div class="sectionContainer">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="sectionHeader">Address:</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<h5>{{contact.address.street}}</h5>
+				<h5>{{contact.address.city}}, {{contact.address.state}} {{contact.address.zip}}</h5>
+			</div>
+		</div>
+	</div>
+	
+	<div class="sectionContainer">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="sectionHeader">Birthday:</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<h5>{{contact.birthdate | date: 'fullDate'}}</h5>
+			</div>
+		</div>
+	</div>
+
+	<div class="sectionContainer">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="sectionHeader">Email:</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-8">
+				<h6>{{contact.email}}</h6>
+			</div>
+			<div class="col-xs-4">
+				<a href="mailto:{{contact.email}}"><h5 class="link">Work</h5></a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="sectionContainer">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="sectionHeader">Website:</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-8">
+				<h6>{{contact.website}}</h6>
+			</div>
+			<div class="col-xs-4">
+				<a href="{{contact.website}}" target="_blank"><h5 class="link">Launch</h5></a>
+			</div>
+		</div>
+	</div>
+	
+
+</div>
+
 
 
 

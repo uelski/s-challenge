@@ -68,6 +68,65 @@ body {
       }
     }
   }
+
+  .mobileContainer {
+    padding-left: 0;
+
+    .cardColumn {
+      height: 700px;
+      overflow: scroll;
+
+      .mobileCardContainer {
+        border-top: 1px solid rgba(0,0,0,0.7);
+        border-bottom: 1px solid rgba(0,0,0,0.7);
+        margin-left: 0px;
+        padding: 10px;
+        background-color: #CFD8DC;
+        &:focus {
+          outline: none;
+        }
+        &.selected {
+          background-color: #90A4AE;
+        }
+        .picture {
+          img {
+            height: 100px;
+          }
+        }
+      }
+
+    }
+  }
+
+  .mobileSelectedUserContainer {
+    .sectionContainer {
+      margin: 20px 0;
+      &.top {
+        .picture {
+          img {
+            height: 85px;
+          }
+        }
+      }
+      .topText {
+        margin: 0;
+      }
+      a {
+        text-decoration: none;
+        .link {
+          color: #1E88E5;
+        }
+      }
+    }
+  }
+
+  .contactHeader {
+    padding: 15px 0 0 15px;
+  }
+  .contactWarning {
+    text-align: center;
+    padding-top: 40px;
+  }
 }
 
 /////////////////
@@ -110,6 +169,10 @@ body {
               img {
                 height: 125px;
               }
+            }
+            .name {
+              margin-top: 0px;
+              margin-bottom: 0;
             }
           }
         }

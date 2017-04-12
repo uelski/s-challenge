@@ -1,4 +1,4 @@
-<div class="container-fluid desktopContainer">
+<div class="container-fluid desktopContainer hidden-xs">
 	<div class="row">
 		<div class="col-sm-5 cardColumn">
 			<contact-card-desktop ng-repeat="contact in contacts track by $index" contact="contact" selected-index="selectedIndex" index="{{$index}}" select-contact="selectContact({index: $index})"></contact-card-desktop>
@@ -7,5 +7,15 @@
 			<selected-user contact="contact"></selected-user>
 		</div>
 	</div>
+</div>
+
+<div class="container-fluid mobileContainer visible-xs-block">
+
+	<div class="row">
+		<div class="col-sm-5 cardColumn">
+			<contact-card-mobile ng-repeat="contact in contacts track by $index" contact="contact" selected-index="selectedIndex" index="{{$index}}" show-contact="showContact({index: $index})"></contact-card-mobile>
+		</div>
+	</div>
+
 </div>
 

@@ -1,6 +1,6 @@
 <div class="desktopCardContainer row" ng-class="{selected: selectedIndex === {{index}}}" ng-click="selectContact()">
 	<div class="col-sm-3 col-md-4 picture">
-		<img src="{{contact.largeImageURL}}">
+		<img ng-src="{{contact.largeImageURL}}">
 	</div>
 	<div class="col-sm-9 col-md-8 info">
 		<h4 class="name">{{contact.name}}</h4>
