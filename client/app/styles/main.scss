@@ -17,8 +17,8 @@ body {
       overflow: scroll;
 
       .desktopCardContainer {
-        border-top: 1px solid rgba(0,0,0,0.7);
-        border-bottom: 1px solid rgba(0,0,0,0.7);
+        border-top: 1px solid rgba(0,0,0,0.2);
+        border-bottom: 1px solid rgba(0,0,0,0.2);
         margin-left: 0px;
         padding: 10px;
         background-color: #CFD8DC;
@@ -70,16 +70,14 @@ body {
   }
 
   .mobileContainer {
-    padding-left: 0;
+    padding: 0;
 
     .cardColumn {
       height: 700px;
       overflow: scroll;
-
+      padding: 0;
       .mobileCardContainer {
-        border-top: 1px solid rgba(0,0,0,0.7);
-        border-bottom: 1px solid rgba(0,0,0,0.7);
-        margin-left: 0px;
+        margin: 5px 0;
         padding: 10px;
         background-color: #CFD8DC;
         &:focus {
@@ -90,7 +88,7 @@ body {
         }
         .picture {
           img {
-            height: 100px;
+            height: 60px;
           }
         }
       }

@@ -14,7 +14,6 @@ angular.module('clientApp')
   	$scope.mobileContact = $rootScope.contactSelected;
 
   	$scope.backToContacts = function() {
-  		console.log('back to contacts');
   		$location.path('/');
   	};
 
