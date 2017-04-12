@@ -27,4 +27,5 @@ angular.module('clientApp')
       $scope.selectedIndex = index;
     };
 
+
   }]);
