@@ -1,9 +1,9 @@
 <div class="desktopCardContainer row" ng-class="{selected: selectedIndex === {{index}}}" ng-click="selectContact()">
-	<div class="col-xs-4 picture">
+	<div class="col-sm-3 col-md-4 picture">
 		<img src="{{contact.largeImageURL}}">
 	</div>
-	<div class="col-xs-8 info">
-		<h3 class="name">{{contact.name}}</h3>
+	<div class="col-sm-9 col-md-8 info">
+		<h4 class="name">{{contact.name}}</h4>
 		<div class="phone" ng-if="contact.phone.mobile !== '' && contact.phone.mobile !== undefined">Mobile: {{contact.phone.mobile}}</div>
 		<div class="phone" ng-if="contact.phone.mobile === '' || contact.phone.mobile === undefined">Home: {{contact.phone.home}}</div>
 	</div>

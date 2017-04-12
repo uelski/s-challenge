@@ -24,12 +24,12 @@
 			</div>
 		</div>
 		<div class="row phone">
-			<div class="col-sm-4">
+			<div class="col-md-6 col-sm-8">
 				<h5 ng-if="contact.phone.home !== '' && contact.phone.home !== undefined">{{contact.phone.home}}</h5>
 				<h5 ng-if="contact.phone.mobile !== '' && contact.phone.mobile !== undefined">{{contact.phone.mobile}}</h5>
 				<h5 ng-if="contact.phone.work !== '' && contact.phone.work !== undefined">{{contact.phone.work}}</h5>
 			</div>
-			<div class="col-sm-8">
+			<div class="col-md-6 col-sm-4">
 				<div> </div>
 				<a href="tel:+1{{contact.phone.home}}" ng-if="contact.phone.home !== '' && contact.phone.home !== undefined"><h5 class="link">Home</h5></a>
 
@@ -75,10 +75,10 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-4">
+			<div class="col-md-6 col-sm-8">
 				<h5>{{contact.email}}</h5>
 			</div>
-			<div class="col-sm-8">
+			<div class="col-md-6 col-sm-4">
 				<a href="mailto:{{contact.email}}"><h5 class="link">Work</h5></a>
 			</div>
 		</div>
@@ -91,10 +91,10 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-4">
+			<div class="col-md-6 col-sm-8">
 				<h5>{{contact.website}}</h5>
 			</div>
-			<div class="col-sm-8">
+			<div class="col-md-6 col-sm-4">
 				<a href="{{contact.website}}" target="_blank"><h5 class="link">Launch</h5></a>
 			</div>
 		</div>

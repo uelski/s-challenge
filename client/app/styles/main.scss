@@ -38,6 +38,7 @@ body {
     }
     .infoColumn {
       .selectedUserContainer {
+        margin-top: 30px;
         padding-left: 20px;
         .sectionContainer {
           margin: 20px 0;
@@ -69,25 +70,61 @@ body {
   }
 }
 
+/////////////////
+// media quries
+/////////////////
 
+////////////////
+// tablet
+///////////////
+@media screen and (max-width: 992px) {
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
+.viewContainer {
+  .desktopContainer {
+    .cardColumn {
+      .desktopCardContainer {
+        border-top: none;
+        border-bottom: none;
+        margin: 5px 0;
+        .picture {
+          padding-left: 0;
+          img {
+            height: 75px;
+          }
+        }
+        .info {
+          .name {
+            font-size: 16px;
+          }
+        }
+      }
+    }
 
+    .infoColumn {
+      .selectedUserContainer {
+        padding-left: 10px;
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
+        .sectionContainer {
+          &.top {
+            .picture {
+              img {
+                height: 125px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+}
+
+
+}
+
+////////////////
+// phone
+////////////////
+@media screen and (max-width: 768px) {
+
+
 }
