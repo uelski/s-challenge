@@ -9,6 +9,9 @@ body {
 
 .viewContainer {
   padding-left: 0;
+
+  /*desktop styles*/
+
   .desktopContainer {
     padding-left: 0;
 
@@ -51,7 +54,7 @@ body {
             }
             .name {
               .favorite {
-                padding-left: 30px;
+                padding-left: 20px;
                 font-size: 25px;
                 &:focus {
                   outline: none;
@@ -78,30 +81,33 @@ body {
     }
   }
 
+  /*mobile styles*/
   .mobileContainer {
     padding: 0;
 
     .cardColumn {
-      height: 700px;
-      overflow: scroll;
       padding: 0;
+
       .mobileCardContainer {
         margin: 5px 0;
         padding: 10px;
         background-color: #CFD8DC;
+
         &:focus {
           outline: none;
         }
+
         &.selected {
           background-color: #90A4AE;
         }
+
         .picture {
           img {
             height: 60px;
           }
         }
-      }
 
+      }
     }
   }
 
@@ -118,7 +124,7 @@ body {
       .topText {
         margin: 0;
         .favorite {
-          padding-left: 20px;
+          padding-left: 10px;
           font-size: 16px;
           &:focus {
             outline: none;
@@ -134,59 +140,59 @@ body {
     }
   }
 
+  /*contact page*/
   .contactHeader {
     padding: 15px 0 0 15px;
   }
   .contactWarning {
     text-align: center;
     padding-top: 40px;
+
   }
 }
 
-/////////////////
-// media quries
-/////////////////
 
-////////////////
-// tablet
-///////////////
+/*media queries*/
 @media screen and (max-width: 992px) {
 
-.viewContainer {
-  .desktopContainer {
-    .cardColumn {
-      .desktopCardContainer {
-        border-top: none;
-        border-bottom: none;
-        margin: 5px 0;
-        .picture {
-          padding-left: 0;
-          img {
-            height: 75px;
+  .viewContainer {
+
+    .desktopContainer {
+      .cardColumn {
+        .desktopCardContainer {
+          border-top: none;
+          border-bottom: none;
+          margin: 5px 0;
+          .picture {
+            padding-left: 0;
+            img {
+              height: 75px;
+            }
           }
-        }
-        .info {
-          .name {
-            font-size: 16px;
+          .info {
+            .name {
+              font-size: 16px;
+            }
           }
         }
       }
-    }
 
-    .infoColumn {
-      .selectedUserContainer {
-        padding-left: 10px;
+      .infoColumn {
+        .selectedUserContainer {
+          padding-left: 10px;
 
-        .sectionContainer {
-          &.top {
-            .picture {
-              img {
-                height: 125px;
+          .sectionContainer {
+            &.top {
+              .picture {
+                img {
+                  height: 125px;
+                }
               }
-            }
-            .name {
-              margin-top: 0px;
-              margin-bottom: 0;
+              .name {
+                margin-top: 0px;
+                margin-bottom: 0;
+                font-size: 25px;
+              }
             }
           }
         }
@@ -195,13 +201,3 @@ body {
   }
 }
 
-
-}
-
-////////////////
-// phone
-////////////////
-@media screen and (max-width: 768px) {
-
-
-}
