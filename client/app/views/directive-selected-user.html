@@ -8,7 +8,7 @@
 			<div class="col-sm-8">
 				<div class="row">
 					<div class="sectionHeader visible-sm-block">Name:</div>
-					<h2 class="name">{{contact.name}}<h2>
+					<h2 class="name">{{contact.name}} <span class="favorite" ng-click="contact.favorite = !contact.favorite" ng-class="{'glyphicon glyphicon-star-empty': contact.favorite == false, 'glyphicon glyphicon-star': contact.favorite == true}" aria-hidden="true"><h2>
 				</div>
 				<div class="row">
 					<div class="sectionHeader">Company:</div>
@@ -116,7 +116,7 @@
 			<div class="col-xs-8">
 				<div class="row">
 					<div class="sectionHeader">Name:</div>
-					<h4 class="topText">{{contact.name}}<h4>
+					<h4 class="topText">{{contact.name}} <span class="favorite" ng-click="contact.favorite = !contact.favorite" ng-class="{'glyphicon glyphicon-star-empty': contact.favorite == false, 'glyphicon glyphicon-star': contact.favorite == true}" aria-hidden="true"><h4>
 				</div>
 				<div class="row">
 					<div class="sectionHeader">Company:</div>
